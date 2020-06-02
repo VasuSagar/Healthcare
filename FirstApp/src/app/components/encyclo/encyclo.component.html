@@ -1,0 +1,17 @@
+<button (click)="drugload()">Load Drugs</button>
+<ul class="list-group">
+       
+    <li class="list-group-item" *ngFor="let pree of drug; index as i" ><b>MEDICINE:</b>{{pree.mname}}<br><br><b>Description:</b>{{pree.desc}}<br><br><b>Uses:</b>{{pree.uses}}<br><br><b>Precaution:</b>{{pree.pre}}
+        
+    
+    </li>
+</ul> 
+
+<button (click)="diseaseload()">Load Diseases</button>
+<ul class="list-group">
+       
+    <li class="list-group-item" *ngFor="let pr of disease; index as i" ><b>Disease:</b>{{pr.dname}}<br><br><b>Description:</b>{{pr.desc}}<br><br><b>Symptoms:</b>{{pr.symp}}<br><br><b>Treatment:</b>{{pr.tre}}<br><br><b>Causes:</b>{{pr.cause}}
+        
+    
+    </li>
+</ul> 

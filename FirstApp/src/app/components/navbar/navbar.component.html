@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">ITM App</a>
+    
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav mr-auto">
+        <li class [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/dashboard']">DashBoard <span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/encyclo']">Encyclopedia<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/blog']">Blog<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInChemist()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/changeprice']">Change Price<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInChemist()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/changemate']">Material Price<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/disease']">Add Disease Information<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/drug']">Add Drug Informatoin<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="authService.loggedIn() || authService.loggedInChemist() || authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/profile']">Profile<span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/login']">Login Patient<span class="sr-only">(current)</span></a>
+          </li>
+          <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/loginchemist']">Login Chemist<span class="sr-only">(current)</span></a>
+          </li>
+          <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/logindoctor']">Login Doctor<span class="sr-only">(current)</span></a>
+          </li>
+        <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+            <a class="nav-link" [routerLink]="['/register']">Register Patient <span class="sr-only">(current)</span></a>
+        </li>
+        <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="['/registerdoctor']">Register Doctor<span class="sr-only">(current)</span></a>
+      </li>
+      <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/registerchemist']">Register Chemist<span class="sr-only">(current)</span></a>
+    </li>
+    <li *ngIf="authService.loggedInChemist()" class [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/addprescription']">Add Prescription<span class="sr-only">(current)</span></a>
+    </li>
+
+    <li *ngIf="authService.loggedInChemist()" class [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/viewprescription']">View Prescription<span class="sr-only">(current)</span></a>
+    </li>
+   
+
+        <li *ngIf="authService.loggedIn() || authService.loggedInChemist() || authService.loggedInDoctor()"  class>
+          <a class="nav-link" (click)="onLogoutClick()" href="#">Logout <span class="sr-only">(current)</span></a>
+      </li>
+        
+      </ul>
+    </div>
+  </nav>

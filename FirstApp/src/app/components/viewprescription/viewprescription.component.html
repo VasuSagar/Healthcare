@@ -1,0 +1,20 @@
+
+PATIENT USERNAME:
+<input type="text" [(ngModel)]="uname" name="uname" id="uname" placeholder="Enter Username">
+<br>
+<br>
+<br>
+PATIENT OTP:  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+    <input type="text" [(ngModel)]="otp" name="otp" id="otp" placeholder="Enter OTP">
+<br><br>
+<button class="btn btn-default" type="button" (click)="Submit()">Submit</button>
+<div >
+    
+    <ul class="list-group">
+        
+        <li class="list-group-item" *ngFor="let pre of prescription; index as i" >USERNAME:{{pre.username}}<br><br>Medicines:{{pre.medname}}<br>Breakfast:{{pre.breakfast}}
+            <button class="btn btn-default"  type="button" (click)="checkout(i)">Select</button>
+        
+        </li>
+    </ul>   
+</div>
