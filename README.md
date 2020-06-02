@@ -10,7 +10,7 @@ Requirements
   After intalling follow these steps to run the instances on your local machine<br /> 
   
   **1**. Download the zip file.<br /> 
-    Go to Healthcare-master.zip directory in your terminal/command prompt<br /> 
+    Go to your extracted Healthcare-master directory in your terminal/command prompt<br /> 
     Type command **npm install** (It will install all the required modules for running backend (Node) server)<br /> <br /> 
   
   **2**. After installation of all modules,Type command **nodemon app**.This will run the backend server on our localhost<br /> 
