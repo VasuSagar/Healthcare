@@ -1,0 +1,519 @@
+/*heder*/
+
+.top-hdr {
+    color: #222;
+    border-bottom: 5px solid #01DFD7;
+   background-color: #80ffff;    
+}
+
+
+
+/*-------- left site --------*/
+
+.support {
+    padding-top: 25px;
+}
+
+.user>ul>li,
+.support .item h4 {
+    font-weight: 500;
+}
+
+.user>ul>li,
+.support .item h4,
+.search-bar .input-group-text .btn {
+    text-transform: uppercase;
+}
+
+.support .item h4,
+.support .item h4 span {
+    font-size: 16px;
+}
+
+.support .item h4 span {
+    font-weight: 400;
+}
+
+.support .item h4 span,
+.search-bar .custom-select-lg {
+    text-transform: capitalize;
+}
+
+.support .item h4 i.fa {
+    color: #2bbbd1;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+
+/*login*/
+html, 
+body{
+  color:#0056b3 ;
+ /* background-color: #0056b3 !important;*/
+  font-family: "Roboto", sans-serif;
+
+    }
+    .img{
+          background: url("../images/back.jpg");
+    }
+    .my-form {
+        padding: 50px;
+        margin-top: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        background-color: #e6fff7; 
+        
+    }	
+    .my-form h1 {
+        font-size: 42px;
+        font-family: 'Pacifico', sans-serif;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .my-form .form-group {
+        margin-bottom: 20px;
+    }
+    .my-form .form-control, .my-form .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+	.my-form .form-control {
+		border-color:#0056b3 ;
+	}
+	.my-form .form-control:focus {
+		border-color: #d8b012;
+		box-shadow: 0 0 8px #dcae10;
+	}
+    
+    .my-form .btn-secondary {
+        min-width: 250px;
+        color: #fff;
+        margin-top: 20px;
+        border: none;
+    }
+
+    .my-form .btn-secondary:hover {
+        color: #fff; 
+    }
+    .my-form .btn-secondary i {
+        margin-right: 5px;
+    }
+    .my-form label {
+        font-weight: bold;
+        opacity: 0.9;
+    }
+    .my-form textarea {
+        resize: vertical;
+    }
+    .bs-example {
+    	margin: 20px;
+    }
+
+
+
+    .home{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        border-left-color: #0056b3;
+        margin-right: 0px;
+    }
+    .home:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+
+    .home1{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        margin-right: 0px;
+    }
+    .home1:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+
+/*start footr*/
+.top-footer {
+    border-top: 2px solid #f3f3f3;
+    border-bottom: 2px solid #01DFD7;
+    padding: 100px 0;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.top-footer .logo {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.top-footer h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 25px 0 40px;
+    position: relative;
+}
+
+.top-footer h3,
+.top-footer ul li a {
+    color: #222;
+}
+
+.top-footer h3:after,
+.top-footer h3:before,
+.top-footer ul li:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    top: 150%;
+    left: 0;
+}
+
+.top-footer h3:after {
+    background: #ddd;
+    width: 50px;
+}
+
+.top-footer h3:before {
+    height: 3px;
+    width: 20px;
+    z-index: 1;
+    background: #2bbbd1;
+}
+
+.top-footer ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.top-footer ul li:last-child {
+    margin-bottom: 0;
+}
+
+.top-footer ul li:after {
+    content: '\f101';
+    font-family: fontawesome;
+    top: 0;
+    font-size: 20px;
+    color: #2bbbd1;
+}
+
+.top-footer ul li a {
+    font-weight: 500;
+}
+
+.top-footer ul li:hover a {
+    color: #2bbbd1;
+}
+
+
+.bottom-footer {
+    padding: 30px 0;
+}
+
+.bottom-footer p {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: #222;
+}
+
+
+/*/*==================== (06). End Footer Section ===================*/
+
+/*forgot page*/
+.fh{
+    background-color: #F8F8F8;
+}
+ .forgot1 {
+        padding: 100px;
+        padding-bottom: 100px;  
+       
+        margin-bottom: 90px; 
+        margin-top: 50px;
+        margin-right: 60px;
+        margin-left: 60px;
+        background-color: #F8F8F8; 
+       
+    }   
+    .forgot1 h3 {
+        font-size: 28px;
+        font-family: 'Pacifico', sans-serif;
+        margin-bottom: 20px;
+        color: black;
+    }
+   .forgot1 .forgot2 {
+        margin-bottom: 20px;
+
+    }
+    .f{
+        width: 100%;
+
+    }
+
+        .forgot1 .btn-secondary {
+        min-width: 200px;
+        color: #fff;
+        margin-top: 20px;
+        border: none;
+    }
+    .forgot1 .btn-secondary:hover {
+        color: #fff; 
+    }
+    .forgot1 .btn-secondary i {
+        margin-right: 5px;
+    }
+
+    /*OTP PAge*/
+
+       .OTP1  h3 {
+        font-size: 20px;
+        font-family: 'Pacifico', sans-serif;
+       margin-bottom: 20px;
+       text-align: center;
+        color: black;
+        font-weight: 600;
+    }
+     .OTP1 {
+        padding: 100px;
+        padding-bottom: 100px;  
+       
+        margin-bottom: 90px; 
+        margin-top: 50px;
+        margin-right: 60px;
+        margin-left: 60px;
+        background-color: #F8F8F8; 
+       
+    }    
+    .OTP1 .OTP2 {
+        margin-bottom: 20px;
+}
+             .OTP1 .btn-secondary {
+        min-width: 250px;
+        color: #fff;
+        margin-top: 20px;
+        border: none;
+    }
+    .OTP1 .btn-secondary:hover {
+        color: #fff; 
+    }
+    .OTP1 .btn-secondary i {
+        margin-right: 5px;
+    }
+
+/*new pssword*/
+
+       .new1  h3 {
+        font-size: 20px;
+        font-family: 'Pacifico', sans-serif;
+       margin-bottom: 20px;
+       text-align: center;
+        color: black;
+        font-weight: 600;
+    }
+     .new1 {
+        padding: 100px;
+        padding-bottom: 100px;  
+       
+        margin-bottom: 90px; 
+        margin-top: 50px;
+        margin-right: 60px;
+        margin-left: 60px;
+        background-color: #F8F8F8; 
+       
+    }    
+    .new1 .new2 {
+        margin-bottom: 20px;
+}
+    .new1 .btn-secondary {
+        min-width: 250px;
+        color: #fff;
+        margin-top: 20px;
+        border: none;
+    }
+    .new1 .btn-secondary:hover {
+        color: #fff; 
+    }
+    .OTP1 .btn-secondary i {
+        margin-right: 5px;
+    }
+
+    /*docotr menu start*/
+
+
+.sitemenu {
+    background: #2bbbd1;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav>li {
+    position: relative;
+    margin-right: 30px;
+}
+
+.navbar-nav li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 0;
+    display: block;
+    margin-right: 30px;
+}
+
+.navbar-nav li ul {
+    position: absolute;
+    background: #f8f8f8;
+    z-index: 99;
+    white-space: nowrap;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+}
+
+.navbar-nav li ul li a {
+    color: #222;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.navbar-nav li ul li:hover>a {
+    background: #2BBBD1;
+    color: #fff;
+    margin-right: 0;
+}
+
+.navbar-nav li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f8f8f8;
+    min-width: 200px;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.navbar-nav li a:after {
+    position: absolute;
+    content: '\f107';
+    font-family: fontawesome;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar.menubar ul li a:only-child {
+    margin-right: 0;
+}
+
+.navbar.menubar ul li a:only-child:hover:after,
+.navbar.menubar ul li a:only-child:after {
+    content: '';
+}
+
+.navbar.menubar ul li:hover>a:after {
+    content: '\f106';
+    color: #fff;
+}
+
+.navbar.menubar ul li li>a:after {
+    color: #2bbbd1;
+}
+
+.navbar.menubar ul ul li {
+    position: relative;
+}
+
+.navbar.menubar ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+/*Add prescription*/
+
+  .pre_data{
+    width: 50%;
+
+  }
+    .pre_form {
+        
+        margin-top: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        border:solid; 
+        } 
+
+        h1 {
+        font-size: 40px;
+        font-family: 'Pacifico', sans-serif;
+       margin-bottom: 20px;
+       text-align: center;
+        color: red;
+        
+    }
+    .pre_edit{
+      margin-right: 50px;
+      padding-right: 50px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+    }
+    .pre_edit1{
+      border-top: none;
+      border-right: none;
+      border-left: none;
+
+    }
+   .text{
+
+        border-bottom: 2px solid #f3f3f3;
+        padding-bottom: 30px;
+
+    }
+    .doc_sign{
+        text-align: right;
+        color: black;
+        margin-top:50px;
+}
+    .pre_save .btn-secondary {
+        min-width: 100px;
+        color: #fff;
+        margin-top: 20px;
+        border: none;
+    }
+        .new1 .btn-secondary:hover {
+        color: #fff; 
+        background-color:green;

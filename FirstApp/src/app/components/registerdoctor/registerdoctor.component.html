@@ -1,0 +1,29 @@
+<form (submit)="onRegisterSubmit()">
+    <fieldset>
+      <legend>Registration For Doctor</legend>
+      <div class="form-group">
+        <label for="exampleTextarea">Name</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter Your Name">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleTextarea">Username</label>
+        <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Enter UserName">
+        
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" [(ngModel)]="password" name="password"class="form-control" id="password" placeholder="Password">
+      </div>
+      
+     
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>

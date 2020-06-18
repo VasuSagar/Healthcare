@@ -1,0 +1,16 @@
+<p>viewpreforpatient works!</p>
+PATIENT USERNAME:{{uname}}
+
+<br>
+
+<div >
+    
+    <ul class="list-group">
+        
+        <li class="list-group-item" *ngFor="let pre of prescription; index as i" >Medicines:{{pre.medname}}<br>Breakfast:{{pre.breakfast}}
+        
+            <button class="btn btn-default"  type="button" (click)="checkout(i)">Select</button>
+        
+        </li>
+    </ul>   
+</div>

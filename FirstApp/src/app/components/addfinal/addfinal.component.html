@@ -1,0 +1,47 @@
+<form class="example-form" (ngSubmit)="submit()">
+ 
+    <mat-form-field class="example-full-width">
+      <input type="text"
+             placeholder="Select Disease"
+             aria-label="Number"
+             matInput
+             [formControl]="myControl"
+             [matAutocomplete]="auto"
+             [(ngModel)]="varr" name="varr" id="varr" >
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="oncg(option)" >
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+      <br><br><br><br> <br><br><br><br> <br><br><br><br> <br><br><br><br>
+  
+      <mat-form-field class="example-full-width">
+    <input type="text"
+             placeholder="Select Medicines"
+             aria-label="Numberr"
+             matInput
+             [formControl]="myControl2"
+             [matAutocomplete]="autotest"
+             [(ngModel)]="varr1" name="varr1" id="varr1"
+             >
+      <mat-autocomplete #autotest="matAutocomplete">
+        <mat-option *ngFor="let option1 of filteredOptions2 | async" [value]="option1" >
+          {{option1}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  
+    <input type="submit" value="Register">
+  
+  
+  </form>
+  
+  <!--
+  <div *ngFor="let name of options2">
+    {{name}}
+  </div>
+  -->
+  
+  <br><br><br><br>
+  

@@ -1,0 +1,37 @@
+
+<p>checkoutprescription works!</p>
+<div id="content" #content>
+Username:{{data.username}}<br>
+Medicine:{{data.medname}}<br>
+breakfast:{{data.breakfast}}<br>
+lunch:{{data.lunch}}<br>
+<br><br><br>
+<hr>
+     <table class="table table-striped table-bordered">
+  <thead>
+              <tr>
+                <th>Medicine Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                
+                  <tr *ngFor="let mprice of medicineprice.price let i=index">
+                    <td>{{data.medname[i]}}</td>
+                    <td>{{mprice}}</td>
+                    <td>{{data.quantity[i]}}</td>
+                  </tr>
+                  
+            </tbody>
+          </table>
+       
+<hr>
+<b>Total</b>{{medicineprice.total}}
+<br>
+
+</div>
+<button (click)="updateQuantity()">Submit</button>
+<button (click)="downloadpdf()">Download PDF</button>
+<button (click)="goBack()">Discard</button>
