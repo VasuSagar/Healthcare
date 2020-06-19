@@ -18,7 +18,7 @@ mongoose.connection.on("error",(err)=>{
 
 
 const app=express();
-const port=1331;
+const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
 
 const users=require('./routes/users');
 //for blog posts
