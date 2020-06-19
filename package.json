@@ -1,0 +1,25 @@
+{
+  "name": "projmean",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "jspdf": "^1.4.1",
+    "mongoose": "*",
+    "nodemailer": "^6.4.8",
+    "nodemon": "*",
+    "passport": "*",
+    "passport-jwt": "*",
+    "twilio": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

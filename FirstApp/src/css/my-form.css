@@ -1,0 +1,85 @@
+html, 
+body{
+  color:#0056b3 ;
+  background-color: #0056b3 !important;
+  font-family: "Roboto", sans-serif;
+    }
+    .my-form {
+        padding: 50px;
+        margin-top: 50px;
+        margin-right: 50px;
+        margin-left: 50px;
+        background-color:white; 
+    }	
+    .my-form h1 {
+        font-size: 42px;
+        font-family: 'Pacifico', sans-serif;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .my-form .form-group {
+        margin-bottom: 20px;
+    }
+    .my-form .form-control, .my-form .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+	.my-form .form-control {
+		border-color:#0056b3 ;
+	}
+	.my-form .form-control:focus {
+		border-color: #d8b012;
+		box-shadow: 0 0 8px #dcae10;
+	}
+    .my-form .btn-secondary {
+        min-width: 250px;
+        
+        margin-top: 20px;
+        border: none;
+    }
+    .my-form .btn-secondary:hover {
+           }
+    .my-form .btn-secondary i {
+        margin-right: 5px;
+    }
+    .my-form label {
+        font-weight: bold;
+        opacity: 0.9;
+    }
+    .my-form textarea {
+        resize: vertical;
+    }
+    .bs-example {
+    	margin: 20px;
+    }
+
+
+
+
+    .home{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        border-left-color: #0056b3;
+        margin-right: 0px;
+    }
+    .home:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+
+    .home1{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        margin-right: 0px;
+    }
+    .home1:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+

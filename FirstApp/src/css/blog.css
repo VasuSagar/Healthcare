@@ -1,0 +1,87 @@
+html, 
+body{
+  color:#0056b3 ;
+  background-color: #0056b3 !important;
+  font-family: "Roboto", sans-serif;
+    }
+    .my-blog {
+        padding: 50px;
+        margin-top: 50px;
+        margin-right: 400px;
+        /* margin-left: 10px; */
+        background-color:white;
+        border-radius: 20px;
+    }	
+    .my-blog h1 {
+        font-size: 42px;
+        font-family: 'Pacifico', sans-serif;
+        margin: 0 0 50px;
+        text-align: center;
+    }
+    .my-blog .form-group {
+        margin-bottom: 20px;
+    }
+    .my-blog .form-control, .my-blog .btn {
+        min-height: 38px;
+        border-radius: 2px;
+    }
+	.my-blog .form-control {
+		border-color:#0056b3 ;
+	}
+	.my-blog .form-control:focus {
+		border-color: #d8b012;
+		box-shadow: 0 0 8px #dcae10;
+	}
+    .my-blog .btn-secondary {
+        min-width: 150px;
+        color: #fff;
+        margin: 20px;
+        border: none;
+    }
+    .my-blog .btn-secondary:hover {
+        color: #fff; 
+    }
+    .my-blog .btn-secondary i {
+        margin-right: 5px;
+    }
+    .my-blog label {
+        font-weight: bold;
+        opacity: 0.9;
+    }
+    .my-blog textarea {
+        resize: vertical;
+    }
+    .bs-example {
+    	margin: 20px;
+    }
+
+
+
+
+    .home{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        border-left-color: #0056b3;
+        margin-right: 0px;
+    }
+    .home:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+
+    .home1{
+        border-width: 1px;
+        border: solid; 
+        border-color: transparent;
+        margin-right: 0px;
+    }
+    .home1:hover{
+        border-width: 1px;
+        border: solid; 
+        border-color: #0056b3;
+        margin-right: 0px;
+    }
+

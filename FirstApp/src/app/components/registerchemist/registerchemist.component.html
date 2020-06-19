@@ -1,0 +1,35 @@
+<div class="form1">
+  <div class="container">
+  <div class="row">
+      <div class="col-md-8 col-md-offset-2 m-auto">
+          <div class="my-form">
+              <h1>Chemist Register</h1>
+              <form (submit)="onRegisterSubmit()">
+                      <div class="form-group">
+                        <label for="exampleTextarea">Name</label>
+                        <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="Enter Your Name">
+                      </div>           
+                  <div class="form-group">
+                    <label for="exampleTextarea">Username</label>
+                    <input type="text" [(ngModel)]="username" name="username" class="form-control" placeholder="Enter UserName">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" [(ngModel)]="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" [(ngModel)]="password" name="password"class="form-control" id="password" placeholder="Password">
+                    <input type="checkbox" onclick="myFunction('password')">Show Password
+                  </div>
+                  <div class="text-center">
+                      <button type="submit" class="btn btn-secondary">Sign up</button>
+
+                  </div>            
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
