@@ -20,7 +20,7 @@ export class AuthService {
   registerUser(user){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/register',user,{headers:headers})
+    return this.http.post('api/users/register',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -28,7 +28,7 @@ export class AuthService {
   registerDoctor(user){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/registerdoctor',user,{headers:headers})
+    return this.http.post('api/users/registerdoctor',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -36,7 +36,7 @@ export class AuthService {
   registerChemist(user){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/registerchemist',user,{headers:headers})
+    return this.http.post('api/users/registerchemist',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -45,7 +45,7 @@ export class AuthService {
 
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/authenticate',user,{headers:headers})
+    return this.http.post('api/users/authenticate',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -56,7 +56,7 @@ export class AuthService {
 
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/authenticatedoctor',user,{headers:headers})
+    return this.http.post('api/users/authenticatedoctor',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -67,7 +67,7 @@ export class AuthService {
 
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/authenticatechemist',user,{headers:headers})
+    return this.http.post('api/users/authenticatechemist',user,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
@@ -78,7 +78,7 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization',this.authToken);
     headers.append('Content-Type','application/json');
-    return this.http.get('http://localhost:1331/users/profile',{headers:headers})
+    return this.http.get('api/users/profile',{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
@@ -87,7 +87,7 @@ export class AuthService {
     this.loadTokenChemist();
     headers.append('Authorization',this.authToken);
     headers.append('Content-Type','application/json');
-    return this.http.get('http://localhost:1331/users/profile',{headers:headers})
+    return this.http.get('api/users/profile',{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
@@ -97,7 +97,7 @@ export class AuthService {
     this.loadTokenDoctor();
     headers.append('Authorization',this.authToken);
     headers.append('Content-Type','application/json');
-    return this.http.get('http://localhost:1331/users/profile',{headers:headers})
+    return this.http.get('api/users/profile',{headers:headers})
     .map(res=>res.json()); //observable so we use .map
    
   }
@@ -179,14 +179,14 @@ export class AuthService {
   addPrescription(prescirption){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/addprescription',prescirption,{headers:headers})
+    return this.http.post('api/users/addprescription',prescirption,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
   viewPrescription(obj){         
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/viewprescription',obj,{headers:headers})
+    return this.http.post('api/users/viewprescription',obj,{headers:headers})
     .map(res=>res.json());
     
   }
@@ -195,7 +195,7 @@ export class AuthService {
   viewPrescriptionpat(obj){         
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/viewprescriptionpat',obj,{headers:headers})
+    return this.http.post('api/users/viewprescriptionpat',obj,{headers:headers})
     .map(res=>res.json());
     
   }
@@ -203,7 +203,7 @@ export class AuthService {
   /*
   viewPrescription(){         //backup 
     
-    return this.http.get('http://localhost:1331/users/viewprescription')
+    return this.http.get('api/users/viewprescription')
     .map(res=>res.json());
     
   }
@@ -212,7 +212,7 @@ export class AuthService {
   viewMedicinePrice(medname){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/viewprice',medname,{headers:headers})
+    return this.http.post('api/users/viewprice',medname,{headers:headers})
     .map(res=>res.json());
   }
 
@@ -220,13 +220,13 @@ export class AuthService {
   registerDrug(drug){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/registerdrug',drug,{headers:headers})
+    return this.http.post('api/users/registerdrug',drug,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
 
   viewDrugs(){
-    return this.http.get('http://localhost:1331/users/viewdrugs')
+    return this.http.get('api/users/viewdrugs')
     .map(res=>res.json());
     
   }
@@ -235,28 +235,28 @@ export class AuthService {
   registerDisease(disease){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/registerdisease',disease,{headers:headers})
+    return this.http.post('api/users/registerdisease',disease,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
 
   }
 
   viewDiseases(){
     
-    return this.http.get('http://localhost:1331/users/viewdiseases')
+    return this.http.get('api/users/viewdiseases')
     .map(res=>res.json());
     
   }
 
   viewAllMedicinePrice(){
   
-    return this.http.get('http://localhost:1331/users/viewallprice')
+    return this.http.get('api/users/viewallprice')
     .map(res=>res.json());
   }
 
   saveeditedmed(medobj){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/editmed',medobj,{headers:headers})
+    return this.http.post('api/users/editmed',medobj,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
@@ -264,14 +264,14 @@ export class AuthService {
   saveeditedmed2(medobj){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/editmed2',medobj,{headers:headers})
+    return this.http.post('api/users/editmed2',medobj,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
   // Function to get public profile data
   getPublicProfile(username) {
     this.createAuthenticationHeaders(); // Create headers before sending to API
-    return this.http.get('http://localhost:1331/users/publicProfile/' + username, this.options).map(res => res.json());
+    return this.http.get('api/users/publicProfile/' + username, this.options).map(res => res.json());
   }
 
    // Function to create headers, add token, to be used in HTTP requests
@@ -288,26 +288,26 @@ export class AuthService {
 
   getProfileDoctorbyname(username){
     this.createAuthenticationHeaders(); // Create headers before sending to API
-    return this.http.get('http://localhost:1331/users/publicProfile1/' + username, this.options).map(res => res.json());
+    return this.http.get('api/users/publicProfile1/' + username, this.options).map(res => res.json());
   }
 
   getDoctormed(did){
    
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/getdoctormed',did,{headers:headers})
+    return this.http.post('api/users/getdoctormed',did,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
 
   getDoctordisname(){
-    return this.http.get('http://localhost:1331/users/getdoctordis')
+    return this.http.get('api/users/getdoctordis')
     .map(res=>res.json());
     
   }
 
   getDoctordisid(){
-    return this.http.get('http://localhost:1331/users/getdoctordisid')
+    return this.http.get('api/users/getdoctordisid')
     .map(res=>res.json());
     
   }
@@ -315,13 +315,13 @@ export class AuthService {
   addPrescription2(prescirption){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/addprescription2',prescirption,{headers:headers})
+    return this.http.post('api/users/addprescription2',prescirption,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
   getDoctordAllmed(){
     
-    return this.http.get('http://localhost:1331/users/getdoctorallmed')
+    return this.http.get('api/users/getdoctorallmed')
     .map(res=>res.json());
     
   }
@@ -329,18 +329,18 @@ export class AuthService {
   updatequant(medobj){
     let headers=new Headers();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:1331/users/updquant',medobj,{headers:headers})
+    return this.http.post('api/users/updquant',medobj,{headers:headers})
     .map(res=>res.json()); //observable so we use .map
   }
 
   getgraph()
   {
-    return this.http.get('http://localhost:1331/users/graph')
+    return this.http.get('api/users/graph')
     .map(res=>res.json());
   }
   getgraph2()
   {
-    return this.http.get('http://localhost:1331/users/graph2')
+    return this.http.get('api/users/graph2')
     .map(res=>res.json());
   }
 
