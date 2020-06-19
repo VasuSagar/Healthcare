@@ -6,7 +6,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 })
 export class BlogserviceService {
   options;
-  domain = 'http://localhost:1331';
+  domain = 'api';
 
   constructor(private authService: AuthService,
     private http: Http) { }
@@ -25,31 +25,31 @@ export class BlogserviceService {
     // Function to create a new blog post
     newBlog(blog) {
     this.createAuthenticationHeaders(); // Create headers
-    return this.http.post('http://localhost:1331/users/newBlog', blog, this.options).map(res => res.json());
+    return this.http.post('api/users/newBlog', blog, this.options).map(res => res.json());
   }
 
   // Function to get all blogs from the database
   getAllBlogs() {
     this.createAuthenticationHeaders(); // Create headers
-    return this.http.get('http://localhost:1331/users/allBlogs', this.options).map(res => res.json());
+    return this.http.get('api/users/allBlogs', this.options).map(res => res.json());
   }
 
   // Function to get the blog using the id
   getSingleBlog(id) {
     this.createAuthenticationHeaders(); // Create headers
-    return this.http.get('http://localhost:1331/users/singleBlog/'+ id, this.options).map(res => res.json());
+    return this.http.get('api/users/singleBlog/'+ id, this.options).map(res => res.json());
   }
 
   // Function to edit/update blog post
   editBlog(blog) {
     this.createAuthenticationHeaders(); // Create headers
-    return this.http.put('http://localhost:1331/users/updateBlog/', blog, this.options).map(res => res.json());
+    return this.http.put('api/users/updateBlog/', blog, this.options).map(res => res.json());
   }
 
    // Function to delete a blog
    deleteBlog(id) {
     this.createAuthenticationHeaders(); // Create headers
-    return this.http.delete('http://localhost:1331/users/deleteBlog/'+ id, this.options).map(res => res.json());
+    return this.http.delete('api/users/deleteBlog/'+ id, this.options).map(res => res.json());
   }
 
 
@@ -57,13 +57,13 @@ export class BlogserviceService {
   likeBlog(id) {
     //const blogData = { id: id,uname:"doc2"};
     
-    return this.http.put('http://localhost:1331/users/likeBlog/', id, this.options).map(res => res.json());
+    return this.http.put('api/users/likeBlog/', id, this.options).map(res => res.json());
   }
 
   // Function to dislike a blog post
   dislikeBlog(id) {
     //const blogData = { id: id };
-    return this.http.put('http://localhost:1331/users/dislikeBlog/', id, this.options).map(res => res.json());
+    return this.http.put('api/users/dislikeBlog/', id, this.options).map(res => res.json());
   }
 
   // Function to post a comment on a blog post
@@ -71,7 +71,7 @@ export class BlogserviceService {
     
     this.createAuthenticationHeaders(); // Create headers
  
-    return this.http.post('http://localhost:1331/users/comment/', data, this.options).map(res => res.json());
+    return this.http.post('api/users/comment/', data, this.options).map(res => res.json());
 
   }
 
