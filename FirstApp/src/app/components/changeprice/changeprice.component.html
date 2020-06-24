@@ -1,0 +1,41 @@
+<p>changeprice works!</p>
+
+
+<table class="table table-striped table-bordered"> 
+    <thead>  
+        <th>Medicine Name</th>          
+        <th>Price</th> 
+        <th>Edit</th>  
+       </thead>  
+       <tbody>  
+        
+
+<tr *ngFor="let pre of medicineprice">
+    <td *ngIf="pre.id===editRowId"><input type="text" [(ngModel)]="pre.medname"></td>
+    <td *ngIf="pre.id!==editRowId" >{{pre.medname}}</td>
+    <td *ngIf="pre.id===editRowId"><input type="text" [(ngModel)]="pre.price"></td>
+    <td *ngIf="pre.id!==editRowId">{{pre.price}}</td>
+    
+    <td>
+        <button type="button" class="btn btn-primary" (click)="Edit(pre.id)">Edit</button>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+        <button type="button" class="btn btn-danger">Delete</button>  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-primary" (click)="Save(pre.id)">Save</button> 
+    </td>
+<br>
+</tr>
+
+<tr *ngIf="temp">
+    <td ><input type="text"></td>
+</tr>
+
+
+</tbody>
+</table>
+
+<button type="submit" class="btn btn-primary" (click)="Add()">Add New Medicine</button>
+
+
+<br><br><br><br><br>

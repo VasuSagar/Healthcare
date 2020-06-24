@@ -1,0 +1,33 @@
+<div class="container">
+
+      
+        <br><hr> <br> <br>
+      <div class="col-md-10">
+         
+        <div *ngIf="!loading && chartOptions">
+
+
+        <highcharts-chart 
+          [Highcharts]="Highcharts"
+
+          
+          [options]="chartOptions"
+
+
+          style="width: 100%; height: 400px; display: block;"
+        ></highcharts-chart>
+        </div>
+        </div>
+        <br><hr> <br> <br>
+        
+        <br>
+        <div class="col-md-4"></div>
+        <app-sales></app-sales>
+        </div>
+                
+  
+
+        <div class="row" style="margin-left: 150px; margin-top: 50px;">
+   
+          <app-graph2></app-graph2>
+        </div>

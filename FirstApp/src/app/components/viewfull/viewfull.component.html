@@ -1,0 +1,36 @@
+<div style="background-color: white; margin-top: 40px; padding: 10px;">
+  <div >
+Username:{{data.username}}<br>
+Hospital:{{data.hname}}<br>
+Doctor Name:{{data.dname}}<br>
+Disease:{{data.disease}}<br>
+otp:{{data.otp}}<br>
+
+
+<br><br><br>
+<hr>
+<table class="table table-striped table-bordered">
+    <thead>
+                <tr>
+                  <th>Medicine Name</th>
+                  <th>Quantity</th>
+                  <th>Breakfast</th>
+                  <th>Lunch</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                  
+                    <tr *ngFor="let mprice of medicineprice.price let i=index">
+                      <td>{{data.medname[i]}}</td>
+                      <td>{{data.quantity[i]}}</td>
+                      <td>{{data.breakfast[i]}}</td>
+                      <td>{{data.lunch[i]}}</td>
+                    </tr>
+                    
+              </tbody>
+            </table>
+         
+            </div>
+            </div>
+            

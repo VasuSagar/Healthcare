@@ -1,0 +1,107 @@
+<header class="main_menu home_menu">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-12">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                  <a class="navbar-brand" href="index.html"> <span style="color: #0056b3 ">Health</span> Care </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+
+
+
+
+<div class="collapse navbar-collapse main-menu-item justify-content-center" id="navbarsExample03 navbarSupportedContent">
+<ul class="navbar-nav mr-auto align-items-center">
+
+  <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+    <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+  </li>
+   <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/dashboard']">DashBoard <span class="sr-only">(current)</span></a>
+  </li>
+  <!-- <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/encyclo']">Medicine info<span class="sr-only">(current)</span></a>
+  </li>
+  <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/encyclo2']">Disease info<span class="sr-only">(current)</span></a>
+  </li> -->
+
+  <li class="nav-item dropdown" *ngIf="authService.loggedInDoctor() || authService.loggedIn() || authService.loggedInChemist()">
+    <a class="nav-link dropdown-toggle" id="navbarDropdown"
+        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Encyclopedia
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" [routerLink]="['/encyclo']">Medicine Information</a>
+        <a class="dropdown-item" [routerLink]="['/encyclo2']">Disease Information</a>
+       
+    </div>
+  </li>
+
+
+  <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/blog']">Blog<span class="sr-only">(current)</span></a>
+  </li>
+  <!-- <li *ngIf="authService.loggedInChemist()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/changeprice']">Change Price<span class="sr-only">(current)</span></a>
+  </li> -->
+  <li *ngIf="authService.loggedInChemist()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/changemate']">Inventory Management<span class="sr-only">(current)</span></a>
+  </li>
+  <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/disease']">Add Disease<span class="sr-only">(current)</span></a>
+  </li>
+  <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/drug']">Add Drug<span class="sr-only">(current)</span></a>
+  </li>
+  <!-- <li *ngIf="authService.loggedIn() || authService.loggedInChemist() || authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+    <a class="nav-link" [routerLink]="['/profile']">Profile<span class="sr-only">(current)</span></a>
+  </li> -->
+  <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/login']">Patient<span class="sr-only">(current)</span></a>
+    </li>
+    <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/loginchemist']">Chemist<span class="sr-only">(current)</span></a>
+    </li>
+    <li *ngIf="!authService.loggedIn() && !authService.loggedInChemist() && !authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/logindoctor']">Doctor<span class="sr-only">(current)</span></a>
+    </li>
+    <li *ngIf="authService.loggedInChemist()" class [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/graph']">Sales & Stock<span class="sr-only">(current)</span></a>
+    </li>
+    <li *ngIf="authService.loggedInDoctor()" class [routerLinkActive]="['active']">
+      <a class="nav-link" [routerLink]="['/addprescriptionmat']">Add Prescription<span class="sr-only">(current)</span></a>
+    </li>
+  
+<!-- <li *ngIf="authService.loggedInDoctor()" class="nav-item" [routerLinkActive]="['active']">
+<a class="nav-link" [routerLink]="['/addprescription']">Add Prescription<span class="sr-only">(current)</span></a>
+</li> -->
+<li *ngIf="authService.loggedIn()" class [routerLinkActive]="['active']">
+  <a class="nav-link" [routerLink]="['/viewprescriptionpat']">View Prescription<span class="sr-only">(current)</span></a>
+</li>
+
+<li *ngIf="authService.loggedInChemist()" class="nav-item" [routerLinkActive]="['active']">
+<a class="nav-link" [routerLink]="['/viewprescription']">View Prescription<span class="sr-only">(current)</span></a>
+</li>
+
+
+  <li *ngIf="authService.loggedIn() || authService.loggedInChemist() || authService.loggedInDoctor()"  class="nav-item">
+    <a class="btn_2 d-none d-lg-block" (click)="onLogoutClick()" href="#">Logout <span class="sr-only">(current)</span></a>
+</li>
+
+
+
+
+  
+</ul>
+                  </div>
+                  <!-- <a class="btn_2 d-none d-lg-block" href="#">Login / Sign up</a> -->
+              </nav>
+          </div>
+      </div>
+  </div>
+</header>
+<br><br><br><br>

@@ -1,0 +1,11 @@
+<div *ngIf="!loading && chartOptions">
+
+
+    <highcharts-chart 
+      [Highcharts]="Highcharts"
+
+      [options]="chartOptions"
+  
+      style="width: 120%; height: 400px;"
+    ></highcharts-chart>
+    </div>

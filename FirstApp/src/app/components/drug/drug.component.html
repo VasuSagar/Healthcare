@@ -1,0 +1,33 @@
+<div class="form1">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 m-auto">
+            <div class="my-form">
+                <h1>Add Drug Information</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="Medicine Name">Medicine Name</label>
+                        <input type="text" [(ngModel)]="mname" name="mname" class="form-control" placeholder="Enter Medicine Name">
+                    </div>           
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <textarea [(ngModel)]="desc" rows="4" name="desc" class="form-control" placeholder="Enter Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Symptoms">Uses</label>
+                        <textarea [(ngModel)]="uses" rows="4" name="uses" class="form-control" placeholder="Enter Usage"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="Precaution">Precaution</label>
+                        <textarea [(ngModel)]="pre" rows="4" name="pre" class="form-control" placeholder="Enter Necessary Precaution to be taken"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary" (click)="Submit()">Submit</button>
+
+                    </div>            
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
