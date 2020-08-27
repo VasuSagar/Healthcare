@@ -9,7 +9,7 @@ import {tokenNotExpired} from 'angular2-jwt';
 
 
 export class AuthService {
-  url:string='http://localhost:1331';
+  url:string='/api';
   authToken:any;
   user:any;
 
