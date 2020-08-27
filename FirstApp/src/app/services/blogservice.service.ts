@@ -6,7 +6,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 })
 export class BlogserviceService {
   options;
-  url = 'http://localhost:1331';
+  url:string='/api';
 
   constructor(private authService: AuthService,
     private http: Http) { }
