@@ -11,7 +11,7 @@ export class EmpService {
   dataChange: BehaviorSubject<Medicineprice[]> = new BehaviorSubject<Medicineprice[]>([]);
   dialogData: any;
   //;
-  url = 'http://localhost:1331';
+  url:string='/api';
   constructor(private http: HttpClient,
     private toastr: ToastrService) { }
 
