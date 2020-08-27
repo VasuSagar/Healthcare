@@ -11,12 +11,13 @@ export class EmpService {
   dataChange: BehaviorSubject<Medicineprice[]> = new BehaviorSubject<Medicineprice[]>([]);
   dialogData: any;
   //;
+  url = 'http://localhost:1331';
   constructor(private http: HttpClient,
     private toastr: ToastrService) { }
 
   
   getAllIssues():void {  
-    this.http.get<Medicineprice[]>('http://localhost:1331/users/viewallprice').subscribe(data=>{
+    this.http.get<Medicineprice[]>(this.url+'/users/viewallprice').subscribe(data=>{
       this.dataChange.next(data);
     },
     (error: HttpErrorResponse) => {
@@ -32,13 +33,13 @@ export class EmpService {
       return this.dialogData;
     }
     addIssue (issue: Medicineprice): void {
-      this.http.post('http://localhost:1331/users/adddrug2',issue).subscribe(data => {
+      this.http.post(this.url+'/users/adddrug2',issue).subscribe(data => {
         this.dialogData = data;});
         this.toastr.success('Successfully Added');
     }
   
     updateIssue (issue: Medicineprice): void {
-      this.http.post('http://localhost:1331/users/editmed2',issue).subscribe(data => {
+      this.http.post(this.url+'/users/editmed2',issue).subscribe(data => {
         this.dialogData = data;
        // this.flashMessage.show('Successfully edited', 3000);
         this.toastr.success('Successfully added');
@@ -51,7 +52,7 @@ export class EmpService {
   
     deleteIssue (issue: Medicineprice): void {
     // console.log(id);
-      this.http.post('http://localhost:1331/users/deldrug2',issue).subscribe(data => {
+      this.http.post(this.url+'/users/deldrug2',issue).subscribe(data => {
         this.toastr.warning('Successfully deleted');
       
       });
